@@ -7,11 +7,11 @@
 
 
 </div>
-<div class="col-lg-4 mybox">
+<div id="div2" class="col-lg-4 mybox">
 
 
 </div>
-<div class="col-lg-4 mybox">
+<div id="div3" class="col-lg-4 mybox">
 
 
 </div>
@@ -36,6 +36,8 @@
 
 
             partialLoad("/DashBoard/One", "#div1");
+            partialLoad("/DashBoard/Two", "#div2");
+            partialLoad("/DashBoard/Three", "#div3");
 
         });
 
@@ -45,7 +47,7 @@
                 success: function (data) {
                     //alert("success  " + data);
 
-                    target.html(data);
+                    $(target).html(data);
                 }
             });
         }

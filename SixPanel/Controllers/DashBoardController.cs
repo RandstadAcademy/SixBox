@@ -17,17 +17,17 @@ namespace SixPanel.Controllers
 
         public ActionResult One()
         {
-            return View();
+            return PartialView();
         }
 
         public ActionResult Two()
         {
-            return View();
+            return PartialView();
         }
 
         public ActionResult Three()
         {
-            return View();
+            return PartialView();
         }
 
     }
