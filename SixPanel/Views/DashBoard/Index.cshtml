@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
 }
 
-<div class="col-lg-4 mybox">
+<div id="div1" class="col-lg-4 mybox">
 
 
 </div>
@@ -33,19 +33,25 @@
     <script type="text/javascript">
 
         $(document).ready(function () {
-            alert("ready");
+
+
+            partialLoad("/DashBoard/One", "#div1");
 
         });
 
         function partialLoad(url, target) {
 
             $.ajax(url, {
+                success: function (data) {
+                    //alert("success  " + data);
 
+                    target.html(data);
+                }
             });
         }
-        
+
 
 
     </script>
-    
-    } 
+
+} 
